@@ -1,0 +1,6 @@
+2016-11-10 11:41:14 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "PLAY_EVOLUTIONS" not found; SQL statement:
+select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%' [42102-192]
+2016-11-10 11:43:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SLECET[*] * FROM PRODUCT "; expected "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"; SQL statement:
+slecet * from product [42001-192]

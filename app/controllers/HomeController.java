@@ -1,6 +1,13 @@
 package controllers;
 import play.mvc.*;
 import views.html.*;
+import play.api.Environment;
+import play.data.*;
+import play.db.ebean.Transactional;
+import java.util.ArrayList;
+import java.util.List;
+import javax.inject.Inject;
+import models.*;
 
 public class HomeController extends Controller {
 
@@ -13,7 +20,9 @@ public class HomeController extends Controller {
     }
 
     public Result products() {
-        return ok(products.render());
+        List<Product> productsList = Product.findAll();
+
+	return ok(products.render(productsList));
     }
 
 }
